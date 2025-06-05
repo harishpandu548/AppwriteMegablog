@@ -89,7 +89,7 @@ export default function Post() {
         )}
 
         {/* Post Image */}
-        <div className="w-full flex justify-center mb-4 border rounded-xl overflow-hidden">
+        <div className="w-full flex justify-center  rounded-xl overflow-hidden">
           <img 
             src={appwriteService.getFilePreview(post.featuredImage)}
             alt={post.title}
@@ -98,7 +98,7 @@ export default function Post() {
         </div>
 
         {/* Post Title */}
-        <div className="w-full mb-6">
+        <div className="w-full mt-5 mb-6">
           <h1 className="text-2xl font-bold">{post.title}</h1>
         </div>
 
