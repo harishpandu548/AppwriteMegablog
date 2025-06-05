@@ -49,11 +49,11 @@ export default function Post() {
 
   const isAuthor = post && userData ? post.userId === userData.$id : false;
 
-  console.log("post:", post);
-  console.log("userData:", userData);
-  console.log("post.userId:", post?.userId);
-  console.log("userData.$id:", userData?.$id);
-  console.log("isAuthor:", isAuthor);
+  // console.log("post:", post);
+  // console.log("userData:", userData);
+  // console.log("post.userId:", post?.userId);
+  // console.log("userData.$id:", userData?.$id);
+  // console.log("isAuthor:", isAuthor);
 
   // Show loading spinner while waiting
   if (postLoading || !userChecked) {
@@ -90,10 +90,10 @@ export default function Post() {
 
         {/* Post Image */}
         <div className="w-full flex justify-center mb-4 border rounded-xl overflow-hidden">
-          <img
+          <img 
             src={appwriteService.getFilePreview(post.featuredImage)}
             alt={post.title}
-            className="rounded-xl w-full max-h-[500px] object-cover"
+            className="rounded-xl w-full max-h-[500px] object-contain"
           />
         </div>
 
