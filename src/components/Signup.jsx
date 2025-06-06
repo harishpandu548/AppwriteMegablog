@@ -26,6 +26,8 @@ function Signup() {
     }
 
   return (
+    <>
+    <div className=' mb-5 ml-9 text-black bg-gray-100 dark:bg-gray-800 dark:text-white'> Sign up if your new and get started :) </div>
     <div className="flex items-center justify-center">
             <div className={`mx-auto w-full max-w-lg dark:bg-gray-500 bg-gray-200 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
@@ -81,6 +83,7 @@ function Signup() {
             </div>
 
     </div>
+    </>
   )
 }
 

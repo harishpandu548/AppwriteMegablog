@@ -31,15 +31,15 @@ function App() {
       <Header />
       <div className="border-t border-black dark:border-white w-full" />{" "}
       {/* White horizontal line */}
-      <main className="...">...</main>
+      <main className="..."> </main>
       <main className="flex-grow px-2 py-4 min-h-[70vh] flex justify-center items-center ">
         <Outlet />
       </main>
       <Footer />
     </div>
   ) : (
-    <div className="flex justify-center bg-white text-black dark:bg-gray-800  dark:text-white items-center h-screen ">
-      <div className="text-2xl ">Loading....</div>
+    <div className="flex justify-center bg-gray-100 text-black dark:bg-gray-800 text-2xl dark:text-white items-center h-screen ">
+       Loading....
     </div>
   );
 }

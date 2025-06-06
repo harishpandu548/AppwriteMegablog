@@ -59,7 +59,7 @@ export default function Post() {
   if (postLoading || !userChecked) {
     return (
       <div className="flex justify-center items-center h-[60vh]">
-        <h2 className="text-xl font-semibold text-gray-700">Loading post...</h2>
+        <h2 className="text-xl font-semibold bg-gray-100 text-black dark:bg-gray-800 dark:text-white">Loading post....</h2>
       </div>
     );
   }

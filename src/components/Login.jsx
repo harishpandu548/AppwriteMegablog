@@ -28,10 +28,12 @@ const login = async (data) => {
 };
 
   return (
-    <div className="flex items-center justify-center w-full min-h-[calc(100vh-160px)] my-10 px-4 ">
+    <>
+    <div className='absolute mb-130 text-black bg-gray-100 dark:bg-gray-800 dark:text-white'> Login to Read and Edit the posts :) </div>
+    <div className="flex items-center justify-center w-full min-h-[calc(100vh-160px)] my-10 px-4  ">
       {/* 160px = combined header/footer approx height, px-4 for padding on small screens */}
       <div className="mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-500 rounded-xl p-10 border border-black/10 shadow-lg">
-        <div className="mb-2 flex justify-center">
+        <div className="mb-2 flex justify-center"> 
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
@@ -75,7 +77,9 @@ const login = async (data) => {
         </form>
       </div>
     </div>
-  );
-}
+    </>
 
+  );
+  
+}
 export default Login;

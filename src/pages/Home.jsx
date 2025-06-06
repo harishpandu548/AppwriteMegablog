@@ -15,30 +15,31 @@ function Home() {
     });
   }, [loading]);
 
+  // if (posts.length === 0) {
+  //   return (
+  //     <div className="w-full py-8 mt-4 bg-gray-100 text-black dark:bg-gray-800 dark:text-white text-center">
+  //       <Container>
+  //         <h1 className="text-2xl font-bold hover:text-gray-500">
+  //           Login to read posts
+  //         </h1>
+  //       </Container>
+  //     </div>
+  //   );
+  // }
 
-    if (posts.length === 0) {
+  if (loading) {
     return (
-      <div className="w-full py-8 mt-4 text-center">
+      <div className="w-full py-8 mt-4  bg-gray-100 text-black dark:bg-gray-800 dark:text-white text-center">
         <Container>
-          <h1 className="text-2xl font-bold hover:text-gray-500">
-            Login to read posts
+          <h1 className="text-xl  bg-gray-100 text-black dark:bg-gray-800 dark:text-white">
+            Loading posts...
           </h1>
         </Container>
       </div>
     );
   }
 
-  if (loading) {
-    return (
-      <div className="w-full py-8 mt-4 text-center">
-        <Container>
-          <h1 className="text-xl text-black">Loading posts...</h1>
-        </Container>
-      </div>
-    );
-  }
 
-  
   return (
     <div className="w-full py-8">
       <Container>
