@@ -74,11 +74,11 @@ export default function Post() {
         {isAuthor && (
           <div className="flex justify-end gap-2 mb-4 flex-wrap">
             <Link to={`/edit-post/${post.$id}`}>
-              <Buttons className="hover:bg-green-900" bgColor="bg-green-500">
+              <Buttons textcolor="dark:text-white" className="hover:bg-green-900" bgColor="bg-green-500">
                 Edit
               </Buttons>
             </Link>
-            <Buttons
+            <Buttons textcolor="dark:text-white"
               bgColor="bg-red-500"
               className="hover:bg-red-900"
               onClick={deletePost}
@@ -98,12 +98,12 @@ export default function Post() {
         </div>
 
         {/* Post Title */}
-        <div className="w-full mt-5 mb-6">
+        <div className="w-full mt-5 dark:text-white mb-6">
           <h1 className="text-2xl font-bold">{post.title}</h1>
         </div>
 
         {/* Post Content */}
-        <div className="browser-css">{parse(post.content)}</div>
+        <div className="browser-css dark:text-white">{parse(post.content)}</div>
       </Container>
     </div>
   );

@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authservice from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,22 +27,19 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div className="flex flex-col min-h-screen bg-gray-400">
+    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-800">
       <Header />
-
-      {/* Reserve height to prevent footer-jump */}
-      <main className="flex-grow px-2 py-4 min-h-[70vh] flex justify-center items-center">
-        {loading ? (
-          <img src="/load.jpg" alt="Loading..." className="w-20 h-20" />
-        ) : (
-          <Outlet />
-        )}
+      <div className="border-t border-black dark:border-white w-full" />{" "}
+      {/* White horizontal line */}
+      <main className="...">...</main>
+      <main className="flex-grow px-2 py-4 min-h-[70vh] flex justify-center items-center ">
+        <Outlet />
       </main>
       <Footer />
     </div>
   ) : (
-    <div className="flex justify-center items-center h-screen bg-gray-400">
-      <div className="text-2xl text-black">Loading...</div>
+    <div className="flex justify-center bg-white text-black dark:bg-gray-800  dark:text-white items-center h-screen ">
+      <div className="text-2xl ">Loading....</div>
     </div>
   );
 }

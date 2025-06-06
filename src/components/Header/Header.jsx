@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Logo, Logoutbtn } from "../index";
 import { useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import Themetoggle from "../Themetoggle";
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status);
@@ -16,7 +17,7 @@ function Header() {
   ];
 
   return (
-   <header className="bg-gray-500 shadow py-3">
+   <header className="bg-gray-100 text-black shadow py-3 dark:bg-gray-800 dark:text-white">
   <Container>
     <nav className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       
@@ -35,7 +36,7 @@ function Header() {
               <li key={item.name}>
                 <button
                   onClick={() => navigate(item.slug)}
-                  className="inline-block px-4 py-2 text-sm text-white hover:bg-blue-100 hover:text-black rounded-full transition duration-200"
+                  className="inline-block px-4 py-2 text-sm bg-amber-500 text-black hover:bg-amber-700  dark:text-white dark:bg-gray-900 dark:hover:bg-gray-500 rounded-full duration-200"
                 >
                   {item.name}
                 </button>
@@ -48,6 +49,7 @@ function Header() {
           </li>
         )}
       </ul>
+      <Themetoggle/>
     </nav>
   </Container>
 </header>

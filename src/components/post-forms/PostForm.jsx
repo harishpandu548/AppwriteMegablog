@@ -71,7 +71,7 @@ function PostForm({post}) {
 
   return (
        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+            <div className="w-2/3 px-2 dark:text-white">
                 <Input
                     label="Title :"
                     placeholder="Title"
@@ -89,7 +89,7 @@ function PostForm({post}) {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-1/3 px-2  dark:text-white">
                 <Input
                     label="Featured Image :"
                     type="file"
@@ -106,13 +106,13 @@ function PostForm({post}) {
                         />
                     </div>
                 )}
-                <Select
+                <Select 
                     options={["active", "inactive"]}
                     label="Status"
-                    className="mb-4"
+                    className="mb-4 border-gray-400 "
                     {...register("status", { required: true })}
                 />
-                <Buttons className="hover:bg-blue-900 w-full" type="submit" bgColor={post ? "bg-green-500" : undefined}>
+                <Buttons className="hover:bg-blue-600 w-full" textcolor="dark:text-white" type="submit" bgColor={post ? "bg-green-500" : undefined}>
                     {post ? "Update" : "Submit"}
                 </Buttons>
             </div>
